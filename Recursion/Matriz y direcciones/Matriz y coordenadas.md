@@ -39,3 +39,41 @@ int sumaCruz(int [][]matriz, int x, int y, int direccion){
 	}
 }
 ```
+
+### Ejercicio
+
+calcular la suma de los ejercicios de una matriz
+(La matriz usada es la misma del ejercicio del 2026-2 de recursividad)
+```c++
+#include <cstring>  
+#include <iostream>  
+using namespace std;  
+  
+void calcularSumaMatriz(int matriz[10][10], int & suma,int x,int y) {  
+    if (y>=9) {  
+        return calcularSumaMatriz(matriz,suma,x+1,0);  
+    }  
+    if (x>=9)return;  
+    suma = suma + matriz[x][y];  
+    calcularSumaMatriz(matriz,suma,x,y+1);  
+}  
+  
+ int main() {  
+     int matriz[10][10] {  
+{0,0,0,0,0,0,0,0,0,0},  
+{0,0,0,0,0,0,0,0,0,0},  
+{0,0,0,0,0,0,0,0,0,0},  
+{0,0,0,1,1,0,0,0,0,0},  
+{0,0,0,0,0,1,0,0,0,0},  
+{0,0,0,0,1,0,0,1,0,0},  
+{0,0,0,0,0,0,0,0,0,0},  
+{0,0,0,0,0,1,0,0,0,0},  
+{0,0,0,0,0,0,0,0,0,0},  
+{0,0,0,0,0,0,0,0,0,0},  
+     };  
+  
+    int suma = 0;  
+     calcularSumaMatriz(matriz,suma,0,0);  
+    cout << suma << endl;  
+ } 
+```
