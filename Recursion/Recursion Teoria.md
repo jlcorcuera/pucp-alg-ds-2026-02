@@ -50,3 +50,45 @@ for(int i = 3, i<101, i++){
 
 El problema de recursividad: Si no controlan bien las llamadas recursivas podrán tener problemas de repetir cálculos. En el curso no se ven temas de performance, pero es bueno que lo sepan
 
+### Ejercicio obtener el mayor
+
+Versión del profesor:
+```
+int main() {  
+    int mayor = -1;  
+    mayor = maximo(num,0,mayor);  
+    int mayor(int[]num,int posicion,int mayor) {  
+        if (posicion == N)  
+            return mayor;  
+        return mayor(num,posicion +1,max(mayor,num[posicion]));  
+    }  
+}
+```
+
+Versión del delegado
+```
+#include <iostream>  
+#include <iomanip>  
+  
+using namespace std;  
+  
+void encontrarMayor(int numeros[],int & mayorTemp,int  i) {  
+    if (i > 9) return;  
+    if (mayorTemp < numeros[i]) {  
+        mayorTemp = numeros[i];  
+        i = i + 1;  
+        encontrarMayor(numeros,mayorTemp,i);  
+    }  
+    i = i+1;  
+    encontrarMayor(numeros,mayorTemp,i);  
+}  
+  
+int main() {  
+    int numeros[10] {4,5,1,2,10,9,11,0,3,8};  
+    int mayorTemp = numeros[0], i = 1;  
+    encontrarMayor(numeros,mayorTemp,1);  
+    cout << mayorTemp << endl;  
+    return 0;  
+}
+```
+
