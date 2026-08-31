@@ -57,12 +57,14 @@ Versión del profesor:
 int main() {  
     int mayor = -1;  
     mayor = maximo(num,0,mayor);  
-    int mayor(int[]num,int posicion,int mayor) {  
+    
+}
+
+int mayor(int[]num,int posicion,int mayor) {  
         if (posicion == N)  
             return mayor;  
         return mayor(num,posicion +1,max(mayor,num[posicion]));  
     }  
-}
 ```
 
 Versión del delegado
@@ -90,5 +92,44 @@ int main() {
     cout << mayorTemp << endl;  
     return 0;  
 }
+```
+
+### Ejercicio encontrar numero
+
+Ejercicio de Jack Mendoza
+```
+int num = 3;
+int arrNum[10] = {...}
+int indice = encontrarNum(arrNum,q,num);
+
+int encontrarNum(int[] arrNum, int pos, int numBus){
+	if(pos<0) return -1;
+	if(arrNum[pos] == numPos) returnPos;
+	return encontrarNUm(arrNum,pos--,numBus);	
+}
+```
+
+### Ejercicio base 10 a base 2
+
+Ejercicio de Gian Lucas Betetta
+```
+#include <iostream>  
+using namespace std;  
+  
+    void conversionBinario(int n) {  
+        if (n == 0) return;  
+        conversionBinario(n / 2);  
+        cout<<n%2<<" ";  
+    }  
+  
+int main() {  
+    int n = 10;  
+    conversionBinario(n);  
+}
+
+// conversionBinario(5) 10/2
+// conversionBinario(2) 2/2
+// conversionBinario(1) 1/2
+// conversionBinario(0) 0/2
 ```
 
