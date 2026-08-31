@@ -16,7 +16,7 @@ Direcciones:
 - 3 es abajo
 - 4 es izquierda
 
-```
+``` c
 int main{
 	matriz[][] {...} // Lo que esta arriba
 	sumaCruz(matriz,x,y,0);
@@ -24,11 +24,8 @@ int main{
 int sumaCruz(int [][]matriz, int x, int y, int direccion){
 	if(x < 0 or x > N or y > M or y < 0){
 		return 0;
-	}
-	if(direccion == 0){
-		return matriz[x][y] + sumaCruz(matriz,x-1,y,1) + sumacruz(matriz,x+1,y,3)
-			+sumaCruz(matriz,x,y+1,2) + sumaCruz(matriz,x,y-1,4)
-	} else if(dirección == 1){
+	}	
+	if(dirección == 1){
 		return matriz[x][y] + sumaCruz(matriz,x-1,y,1);	
 	} else if(dirección == 2){
 		return matriz[x][y] + sumaCruz(matriz,x,y+1,2);	
@@ -37,5 +34,7 @@ int sumaCruz(int [][]matriz, int x, int y, int direccion){
 	} else if(dirección == 4){
 		return matriz[x][y] + sumaCruz(matriz,x,y-1,4);	
 	}
+	return matriz[x][y] + sumaCruz(matriz,x-1,y,1) + sumacruz(matriz,x+1,y,3)
+			+sumaCruz(matriz,x,y+1,2) + sumaCruz(matriz,x,y-1,4)
 }
 ```
