@@ -6,6 +6,9 @@ Desarrollar una función recursiva que data una coordenada de la matriz, calcule
 | 15  | 10  | ==9== | -1  | -2  | 161 |
 | 10  | 9   | 20    | 18  | 0   | 21  |
 | 15  | 14  | 13    | 10  | 11  | 19  |
+
+
+
 (n,m), desde el punto que esta marcado aplicar Sumacruz
 Direcciones:
 - 1 es arriba
