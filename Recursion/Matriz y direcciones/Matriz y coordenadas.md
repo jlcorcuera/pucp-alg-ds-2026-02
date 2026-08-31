@@ -16,7 +16,7 @@ Direcciones:
 - 3 es abajo
 - 4 es izquierda
 
-``` c
+``` c++
 int main{
 	matriz[][] {...} // Lo que esta arriba
 	sumaCruz(matriz,x,y,0);
