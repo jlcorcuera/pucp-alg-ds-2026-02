@@ -53,7 +53,7 @@ El problema de recursividad: Si no controlan bien las llamadas recursivas podrá
 ### Ejercicio obtener el mayor
 
 Versión del profesor:
-```
+```c++
 int main() {  
     int mayor = -1;  
     mayor = maximo(num,0,mayor);  
@@ -68,7 +68,7 @@ int mayor(int[]num,int posicion,int mayor) {
 ```
 
 Versión del delegado
-```
+```c++
 #include <iostream>  
 #include <iomanip>  
   
@@ -80,9 +80,10 @@ void encontrarMayor(int numeros[],int & mayorTemp,int  i) {
         mayorTemp = numeros[i];  
         i = i + 1;  
         encontrarMayor(numeros,mayorTemp,i);  
-    }  
+    }  else {
     i = i+1;  
-    encontrarMayor(numeros,mayorTemp,i);  
+    encontrarMayor(numeros,mayorTemp,i);
+ 	}
 }  
   
 int main() {  
@@ -97,7 +98,7 @@ int main() {
 ### Ejercicio encontrar numero
 
 Ejercicio de Jack Mendoza
-```
+```c++
 int num = 3;
 int arrNum[10] = {...}
 int indice = encontrarNum(arrNum,q,num);
@@ -112,7 +113,7 @@ int encontrarNum(int[] arrNum, int pos, int numBus){
 ### Ejercicio base 10 a base 2
 
 Ejercicio de Gian Lucas Betetta
-```
+```c++
 #include <iostream>  
 using namespace std;  
   
