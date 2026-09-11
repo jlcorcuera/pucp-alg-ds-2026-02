@@ -5,7 +5,7 @@
 #include <climits>
 using namespace std;
 
-
+//Jack Mendoza 20225080
 
 const int cant_dientes = 8;
 const int duracionCita1=60;
