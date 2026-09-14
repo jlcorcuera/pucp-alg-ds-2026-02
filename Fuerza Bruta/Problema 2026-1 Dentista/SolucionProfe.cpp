@@ -35,7 +35,7 @@ int main() {
         bool valido = true;
 
         for (int j = 0; j < 8; j++) {
-            current_plan[j] = temp % 4;
+               current_plan[j] = temp % 4;
             temp /= 4;
 
             if (current_plan[j] == 3) {
