@@ -1,0 +1,40 @@
+version 2: donde uso una cola de numeros enteros y uso una funcion recursiva para obtener la referencia del nodo en el arbol que tiene ese numero
+
+Nodo *nuevoNodo;
+Nodo *raiz;
+
+
+Nodo* buscarNodo(Nodo *raiz, int valorABuscar) {
+   //retorna la referencia del nodo en el arbol
+}
+
+
+void agregarNodo(Nodo *raiz, Nodo *nuevoNodo) {
+   Cola Q;
+   construir(Q);
+   if (raiz == nullptr) {
+      raiz = nuevoNodo;
+   } else {
+     encolar(Q, raiz->elemento.numero);
+     while (!esColaVacia(Q)) {
+        Nodo *nodoActual = buscarNodo(desencolar(Q));
+        if (nuevoNodo->elemento.numero < nodoActual->elemento.numero) {
+            if (nodoActual->izquierda == nullptr) {
+               nodoActual->izquierda = nuevoNodo;
+               break;   
+            } else {
+                encolar(Q, nodoActual->izquierda->elemento.numero);
+   	 }
+        } else if (nuevoNodo->elemento.numero > nodoActual->elemento.numero) {
+            if (nodoActual->derecha == nullptr) {
+               nodoActual->derecha = nuevoNodo;
+               break;   
+            } else {
+                encolar(Q, nodoActual->derecha->elemento.numero);
+            }
+        } else {
+         break;
+       }
+     }
+    }
+ }

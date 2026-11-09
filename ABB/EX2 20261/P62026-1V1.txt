@@ -1,0 +1,34 @@
+version 1: donde manejo una cola de referencias de nodos de arbol
+
+Nodo *nuevoNodo;
+Nodo *raiz;
+// aqui manejamos una cola de Nodo*
+void agregarNodo(Nodo *raiz, Nodo *nuevoNodo) {
+   Cola Q;
+   construir(Q);
+   if (raiz == nullptr) {
+      raiz = nuevoNodo;
+   } else {
+     encolar(Q, raiz);
+     while (!esColaVacia(Q)) {
+        Nodo *nodoActual = desencolar(Q);
+        if (nuevoNodo->elemento.numero < nodoActual->elemento.numero) {
+            if (nodoActual->izquierda == nullptr) {
+               nodoActual->izquierda = nuevoNodo;
+               break;   
+            } else {
+                encolar(Q, nodoActual->izquierda);
+   	 }
+        } else if (nuevoNodo->elemento.numero > nodoActual->elemento.numero) {
+            if (nodoActual->derecha == nullptr) {
+               nodoActual->derecha = nuevoNodo;
+               break;   
+            } else {
+                encolar(Q, nodoActual->derecha);
+            }
+        } else {
+         break;
+       }
+     }
+    }
+ }
